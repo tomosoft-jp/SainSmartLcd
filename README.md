@@ -14,9 +14,13 @@ Raspberry PI 3とサインスマート 1.8インチ LCDの接続は、SPIを使�
 
 ###サインスマートLCDクラス「ST7735」
 
-###グラフィック基本クラス「Graphic」
+###グラフィック基本クラス「」
 
 ##サンプルプログラムの実行
 
 Raspberry Piで次のコマンドでサンプルプログラムを実行します。次のようにサインスマート 1.8″ TFT カラー LCD上に、一本の直線、二個の円形（一個は塗りつぶし）、二個の四角形（一個は塗りつぶし）が描画されます。
+
+```
+python Graphic.py
+```
 <div align="center" ><img src="https://github.com/tomosoft-jp/SainSmartLcd/blob/master/images/lcd02.jpg"></div>
