@@ -49,8 +49,8 @@ class ST7735:
             (0xE1, 0x0F, 0x1B, 0x0F, 0x17, 0x33, 0x2C, 0x29, 0x2E, 0x30, 0x30, 0x39, 0x3F, 0x00, 0x07, 0x03, 0x10))
         self.write_cmd(0x29)
         self.write_cmd(0x13)
-        # 液晶描画方向設定 縦長 0x48 横長0x28
-        self.write((0x36, 0xC0))
+        # 液晶描画方向設定 縦長 0x40 横長0x20
+        self.write((0x36, 0x40))
         # 描画エリア設定 0～BMPのサイズ
         self.write((0x2A, 0x00, 0x00, 0x00, self.width))
         self.write((0x2B, 0x00, 0x00, 0x00, self.height))
@@ -59,19 +59,19 @@ class ST7735:
         self.write_cmd(0x2C)
 
     def write_cmd(self, cmd):
-        GPIO.output(24, False)  # RS=0
+        GPIO.output(24, False)  # RS=0:コマンドレジスタ指定
         self.spi.xfer2([cmd])
 
     def write_data(self, data):
-        GPIO.output(24, True)  # RS=1
+        GPIO.output(24, True)  # RS=1:データレジスタ指定
         self.spi.xfer2([data])
 
     def write(self, cmd):
         if len(cmd) == 0:
             return
-        GPIO.output(24, False)  # RS=0
+        GPIO.output(24, False)  # RS=0:コマンドレジスタ指定
         self.spi.xfer2([cmd[0]])
-        GPIO.output(24, True)  # RS=1
+        GPIO.output(24, True)  # RS=1:データレジスタ指定
         self.spi.xfer2(list(cmd[1:]))
 
     def dot(self, x, y, color):
