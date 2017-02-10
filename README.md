@@ -60,35 +60,35 @@ Raspberry PI 3とサインスマート 1.8インチ LCDの接続は、SPIを使�
 <dl>
 <dt>__init__(pst7735)<br>
 　pst7735：サインスマートLCDクラス「ST7735」のインスタンス</dt>
-<dd>インスタンス化するときに、サインスマートLCDクラス「ST7735」のインスタンスをパラメータとして受け取ります。</dd>
+<dd>インスタンス化するときに、サインスマートLCDクラス「ST7735」のインスタンスを受け取ります。</dd>
 
 <dt>drawline(x0p, y0p, x1p, y1p, color)<br>
 　x0p, y0p：開始x, yピクセル位置<br>
 　x1p, y1p：終了x, yピクセル位置<br>
 　color：カラーコード</dt>
-<dd>drawlineメソッドは、与えられた始点と終点の間に連続した点を置き、近似的な直線を引くためのアルゴリズム「ブレゼンハムのアルゴリズム」を使用します。</dd>
+<dd>drawlineメソッドは、直線を描画します。</dd>
 
 <dt>drawrect(x, y, w, h, color)<br>
 　x, y：左上のx, yピクセル位置<br>
 　w, h：描画する幅と高さ<br>
 　color：カラーコード</dt>
-<dd>drawrectメソッドは、drawlineメソッドを使用して描画します。</dd>
+<dd>drawrectメソッドは、四角形を描画します。</dd>
 
 <dt>fillrect(x, y, w, h, color)<br>
 　x, y：左上のx, yピクセル位置<br>
 　w, h：塗りつぶす幅と高さ<br>
 　color：カラーコード</dt>
-<dd>fillrectメソッドは、dotメソッドを使用して、指定された位置から、指定された幅と高さの領域を指定された色で塗りつぶします。</dd>
+<dd>fillrectメソッドは、指定された位置から、指定された幅と高さの領域を塗りつぶします。</dd>
 
 <dt>fillscreen(color)<br>
 　color：カラーコード</dt>
-<dd>fillscreenメソッドは、サインスマート 1.8″ TFT カラー LCDの画面サイズをパラメータに、fillrectメソッドを呼び出します。</dd>
+<dd>fillscreenメソッドは、サインスマート 1.8″ TFT カラー LCDの画面を塗りつぶします。</dd>
 
 <dt>drawcircle(x0, y0, r, color)<br>
 　x0, y0：円中心のx, yピクセル位置<br>
 　r：半径ピクセル値<br>
 　color：カラーコード</dt>
-<dd>drawcircleメソッドは、処理時間を節約するために、円を描画する関数は、x'=-y, y'=xという微分公式をうまく利用し、円形の対称性を利用して、円周上の座標を八分の一だけを計算します。</dd>
+<dd>drawcircleメソッドは、円形を描画します。</dd>
 
 <dt>drawcirclehelper(x0, y0, r, cornername, color)<br>
 　x0, y0：丸み中心のx, yピクセル位置<br>
@@ -109,7 +109,7 @@ Raspberry PI 3とサインスマート 1.8インチ LCDの接続は、SPIを使�
 　x0, y0：円中心のx, yピクセル位置 <br>
 　r：半径ピクセル値 <br>
 　color：カラーコード</dt>
-<dd>fillcircleメソッドは、drawlineメソッドで直線を縦に引き、fillcirclehelperメソッドで半円を塗りつぶします。</dd>
+<dd>fillcircleメソッドは、円形を塗りつぶします。</dd>
 
 </dl>
 ##サンプルプログラムの実行
