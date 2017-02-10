@@ -93,15 +93,21 @@ Raspberry PI 3とサインスマート 1.8インチ LCDの接続は、SPIを使�
 <dt>drawcirclehelper(x0, y0, r, cornername, color)<br>
 　x0, y0：丸み中心のx, yピクセル位置<br>
 　r：半径ピクセル値<br>
-　cornername<br>
+　cornername：描画する角<br>
+　　1: top left<br>
+　　2: top right<br>
+　　4: bottom right<br>
+　　8: bottom left<br>
 　color：カラーコード</dt>
 <dd>drawcirclehelperメソッドは、角の丸みを描画します。</dd>
 
 <dt>fillcirclehelper(x0, y0, r, cornername, delta, color)<br>
 　x0, y0：丸み中心のx, yピクセル位置<br>
 　r：半径ピクセル値<br>
-　cornername<br>
-　delta<br>
+　cornername：描画する角<br>
+　　1: left half<br>
+　　2: right half<br>
+　delta：それぞれの1/4間を長さの拡張<br>
 　color：カラーコード</dt>
 <dd>fillcirclehelperメソッドは、角の丸みを塗りつぶします。</dd>
 
