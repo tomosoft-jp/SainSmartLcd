@@ -14,7 +14,7 @@ Raspberry PI 3とサインスマート 1.8インチ LCDの接続は、SPIを使�
 
 ###サインスマートLCDクラス「ST7735」
 <dl>
-  <dt>__init__(width, height)
+  <dt>__init__(width, height)<br>
   　width, height：Raspberry PI 3でサインスマート 1.8″ LCDの表示画面のドット幅と高さ
   </dt>
   <dd>インスタンス化するときに、サインスマート 1.8″ TFT カラー LCDの画面サイズをパラメータとして受け取ります。インスタンス化されたときに、次のコードでLCDコントローラIC「ST7735R」のリセット、py-spidevのインスタンス化およびオープン、LCDコントローラIC「ST7735R」のレジスタ設定などを行います。</dd>
