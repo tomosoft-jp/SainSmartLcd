@@ -127,4 +127,4 @@ python Graphic.py
 ```
 
 次のようにサインスマート 1.8″ TFT カラー LCD上に、一本の直線、二個の円形（一個は塗りつぶし）、二個の四角形（一個は塗りつぶし）が描画されます。
-<div align="center" ><img src="https://tomosoft.jp/github/github/SainSmartLcd/lcd02.jpg"></div>
+<div align="center" ><img src="https://tomosoft.jp/github/SainSmartLcd/lcd02.jpg"></div>
